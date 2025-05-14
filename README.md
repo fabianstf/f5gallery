@@ -1,7 +1,7 @@
 # F5 Gallery
 
 ## TODOs
-- [x] Make it deploy (w/ vercel)
+- [ ] Make it deploy (w/ vercel)
 - [ ] Scaffold basic UI with mock data
 - [ ] Actually set up a database (w/ vercel postgres)
 - [ ] Attach database to UI
