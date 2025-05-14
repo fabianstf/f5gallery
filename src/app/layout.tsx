@@ -14,12 +14,24 @@ const geist = Geist({
   variable: "--font-geist-sans",
 });
 
+function TopNav() {
+  return (
+    <nav className="flex items-center justify-between w-full p-4 text-xl font-semibold border-b">
+      <div>F5 Gallery (WIP)</div>
+      <div>Sign In</div>
+    </nav>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable}`}>
-      <body>{children}</body>
+      <body className=" flex-col gap-4 flex">
+        <TopNav />
+        {children}
+      </body>
     </html>
   );
 }
