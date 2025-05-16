@@ -11,6 +11,7 @@ export const images = pgTableCreator((name) => name)(
     id: d.integer().primaryKey().generatedByDefaultAsIdentity().notNull(),
     name: d.varchar({ length: 256 }).notNull(),
     url: d.varchar({ length: 1024 }).notNull(),
+    userId: d.varchar({ length: 256 }).notNull(),
     createdAt: d
       .timestamp({ withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
