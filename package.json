@@ -23,12 +23,15 @@
     "@clerk/nextjs": "^6.19.4",
     "@neondatabase/serverless": "^1.0.0",
     "@t3-oss/env-nextjs": "^0.12.0",
+    "@uploadthing/react": "^6.4.0",
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.41.0",
+    "geist": "^1.4.2",
     "next": "^15.2.3",
     "postgres": "^3.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "uploadthing": "^6.4.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {

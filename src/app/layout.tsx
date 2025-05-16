@@ -1,8 +1,10 @@
 import "~/styles/globals.css";
+import "@uploadthing/react/styles.css";
+
 import { TopNav } from "~/app/_components/topnav";
 
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
@@ -11,22 +13,17 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className={`${geist.variable}`}>
+      <html lang="en" className={`${GeistSans.variable}`}>
         <body className="flex flex-col gap-4">
           <TopNav />
           {children}
         </body>
       </html>
     </ClerkProvider>
-   );
+  );
 }
