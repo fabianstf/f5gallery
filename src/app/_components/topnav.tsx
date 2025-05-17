@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 import { UploadButton } from "~/utils/uploadthing";
 
 export function TopNav() {
-
   const router = useRouter();
 
   return (
