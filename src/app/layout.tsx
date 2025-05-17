@@ -9,6 +9,7 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { Toaster } from "sonner";
+import { PostHogProvider } from "./_analytics/provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
+      <PostHogProvider>
       <html lang="en">
         <NextSSRPlugin
           /**
@@ -50,8 +52,9 @@ export default function RootLayout({
           {modal}
           <div id="modal-root" />
           <Toaster />
-        </body>
-      </html>
+          </body>
+        </html>
+      </PostHogProvider>
     </ClerkProvider>
   );
 }
