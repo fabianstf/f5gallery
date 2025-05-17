@@ -1,16 +1,16 @@
+import FullPageImageView from "~/components/full-image-page";
+import { Modal } from "./modal";
 import { getImage } from "~/server/queries";
 
-export default async function PhotoModal({
+export default function PhotoModal({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) {
-  const image = await getImage(parseInt((await params).id));
 
   return (
-    <div>
-      <img src={image.url} alt={image.name} className="w-96" />
-      <p>{image.name}</p>
-    </div>
+    <Modal>
+      <FullPageImageView id={parseInt(params.id)} />
+    </Modal>
   );
 }
